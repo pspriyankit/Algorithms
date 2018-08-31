@@ -25,8 +25,8 @@ void quicksort(int a[],int p,int q)
     else{
         int pindex=partition(a,p,q);//returns the pivot element time complexity==->O(n)
         quicksort(a,p,pindex-1);//recurrence relation T(n)=2T(n/2)+n
-        quicksort(a,pindex+1,q);//solving it using master theorem we get time complexity of quicksort O(n)
-    }
+        quicksort(a,pindex+1,q);//solving it using master theorem we get time complexity of quicksort O(nlogn) average case
+    }                            //if we use just a randomize function before selecting the pivot it would take worst case of O(nlogn)
 }
 int main()
 {
